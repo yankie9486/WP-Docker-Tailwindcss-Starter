@@ -1,0 +1,9 @@
+{
+    "vetur.validation.style": false,
+    "vetur.validation.script": false,
+    "css.validate": false,
+    "scss.lint.argumentsInColorFunction": "warning",
+    "scss.lint.duplicateProperties": "warning",
+    "timeline.excludeSources": [],
+    "vetur.format.defaultFormatter.html": "prettier",
+}

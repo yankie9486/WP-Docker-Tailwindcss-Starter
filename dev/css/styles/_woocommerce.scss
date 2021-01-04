@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+# Forms - Woocommerce
+--------------------------------------------------------------*/
+
+form.checkout.woocommerce-checkout,
+.checkout_coupon.woocommerce-form-coupon {
+  @apply flex flex-wrap flex-col mx-auto p-4 border-1 bg-white;
+}
+
+.checkout_coupon.woocommerce-form-coupon .button {
+  @extend .button;
+  @extend .button-primary;
+}
+.woocommerce form .form-row label.checkbox,
+.woocommerce-page form .form-row label.checkbox {
+  @apply inline-flex justify-center items-center flex-no-wrap;
+}
+
+.woocommerce form .form-row .input-checkbox {
+  @apply w-6;
+}
+
+/*--------------------------------------------------------------
+## Products Page
+--------------------------------------------------------------*/
+
+.woocommerce-product-details__short-description {
+  @apply mt-4 mb-6;
+}
+.woocommerce div.product form.cart div.quantity {
+  @apply mr-8;
+}
+.woocommerce button.button.alt {
+  @apply bg-primary-500;
+
+  &:hover {
+    @apply bg-primary-600;
+  }
+}
+
+.woocommerce div.product form.cart {
+  @apply flex items-center;
+}

@@ -1,0 +1,26 @@
+.breadcrumb {
+  li {
+    @apply mb-0 px-2 py-1 text-gray-600 text-12 font-bold flex whitespace-no-wrap;
+
+    &:last-child::after {
+      content: "";
+    }
+
+    &:first-child {
+      @apply px-0 ;
+    }
+    a {
+      @apply text-gray-600 text-12;
+      &:hover {
+        @apply text-primary-500;
+      }
+    }
+
+    &:after {
+      content: "/";
+      @apply ml-2;
+    }
+  }
+
+  
+}

@@ -1,0 +1,133 @@
+/*--------------------------------------------------------------
+## Buttons
+--------------------------------------------------------------*/
+.button {
+  @apply font-sans not-italic font-bold rounded-4 leading-normal inline-block no-underline px-2 py-4 transition-colors duration-150;
+  // transform: translateY(0);
+
+  @screen lg {
+    @apply px-4 py-2;
+  }
+
+  &:focus,
+  &:hover {
+    @apply no-underline outline-none;
+    cursor: pointer;
+  }
+}
+
+input[type="submit"] {
+  @apply cursor-pointer;
+}
+
+.searchform [type="submit"] {
+  @apply rounded-tl-none rounded-bl-none px-3;
+
+  &:hover svg {
+    @apply fill-current;
+  }
+}
+
+.button-primary {
+  @apply bg-primary-500 border-none text-primary-100 font-bold;
+
+  &:hover {
+    @apply bg-primary-600 text-primary-100;
+  }
+
+  &:disabled {
+  }
+}
+
+.button-secondary {
+  @apply bg-secondary-500 text-white border-none;
+
+  &:hover {
+    @apply bg-secondary-600 shadow;
+  }
+}
+
+.button-tr {
+  @apply bg-secondary-300 text-white border-none;
+
+  &:hover {
+    @apply bg-secondary-400 shadow;
+  }
+}
+
+.button-white {
+  @apply bg-gray-100 text-gray-800;
+
+  &:focus,
+  &:hover {
+    @apply bg-white text-gray-600;
+  }
+
+  &:disabled {
+    @apply bg-white text-gray-500;
+  }
+}
+
+.button-primary {
+  @apply bg-primary-500 text-white border-none;
+
+  &:focus,
+  &:hover {
+    @apply bg-primary-600 text-primary-100;
+  }
+
+  &:disabled {
+    @apply bg-gray-300 text-gray-500;
+  }
+}
+
+.outline-dark {
+  @apply border-primary-500 text-primary-500 bg-transparent;
+
+  &:focus,
+  &:hover {
+    @apply border-primary-600 text-primary-600;
+  }
+}
+
+.outline-light {
+  @apply border-2 border-white text-white bg-transparent;
+
+  &:focus,
+  &:hover {
+    @apply bg-transparent border-gray-400 text-gray-400;
+  }
+}
+
+.button-link {
+  @apply font-bold font-serif not-italic;
+}
+
+.highlight {
+  @apply font-bold font-sans not-italic text-primary-100;
+}
+
+.button-xs {
+  @apply px-1 py-1 text-11;
+}
+.button-sm {
+  @apply px-3 py-1;
+}
+
+.button-md {
+  @apply px-4 py-2;
+}
+
+.button-lg {
+  @apply px-8 py-2;
+}
+
+.button-wide {
+  @apply px-16 py-2;
+}
+
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+  @extend .button-primary;
+}

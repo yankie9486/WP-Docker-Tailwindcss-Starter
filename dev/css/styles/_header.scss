@@ -1,0 +1,20 @@
+.custom-logo,
+#menu-toggle,
+.header-apply-btn,
+.header-contact-num {
+  transform: scale(1) 150ms;
+  @apply transition-transform duration-150;
+
+  &.shrink {
+    transform: scale(0.9);
+  }
+}
+
+#header {
+  transition: height 150ms;
+  height: 96px;
+}
+
+#header.shrink {
+  height: 68px;
+}

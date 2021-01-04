@@ -1,0 +1,58 @@
+.glide {
+    @apply flex flex-col;
+
+    &__arrow--disabled {
+        @apply opacity-25;
+    } 
+
+    &__slides {
+        @apply items-stretch m-0;
+    }
+
+
+    &__slide {
+        @apply flex min-w-0 h-auto flex-col justify-between mr-4 mb-0 bg-white;
+    }
+
+    &----swipeable {
+        @apply cursor-grab;
+    }
+    
+    &--dragging {
+        @apply cursor-grabbing;
+    }
+
+
+    .glide__arrow {
+        position: absolute;
+        display: block;
+        top: 50%;
+        z-index: 2;
+        color: white;
+        text-transform: uppercase;
+        background-color: transparent;
+        opacity: 1;
+        cursor: pointer;
+        transition: opacity 150ms ease, border 300ms ease-in-out;
+        transform: translateY(-50%);
+        line-height: 1; }
+        .glide__arrow:focus {
+          outline: none; }
+        .glide__arrow:hover {
+          border-color: white; }
+        .glide__arrow--left {
+          left: 2em; }
+        .glide__arrow--right {
+          right: 2em; }
+        .glide__arrow--disabled {
+          opacity: 0.33; }
+}
+
+.glide-container {
+    @apply max-w-screen;
+
+    @screen xl {
+        max-width: 960px;
+    }
+
+}

@@ -1,0 +1,16 @@
+
+.service-box {
+    @apply flex flex-col w-full relative pr-0 mb-24;
+
+    @screen md {
+        @apply w-4/12 pr-4;
+    }
+
+    &__title-wrap {
+        @apply absolute flex justify-center items-center z-30 bg-white shadow-md p-4;
+        max-width: 328px;
+        width: 328px;
+        top:85%;
+        left:15px;
+    }
+}

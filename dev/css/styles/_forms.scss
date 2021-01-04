@@ -1,0 +1,151 @@
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+
+
+label {
+  @apply text-14 font-sans font-bold mt-4 mb-1 block capitalize;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+  @apply bg-white py-2 text-gray-500 px-2 text-16 leading-normal rounded-4 w-full border-1 border-gray-300 capitalize;
+  @extend .transition;
+
+  &[aria-invalid="true"] {
+    @apply border-primary-100;
+  }
+  &::placeholder {
+    @apply text-gray-500;
+  }
+
+  &:focus {
+    @apply bg-gray-100 border-gray-600;
+  
+  }
+}
+
+select {
+  @apply text-center appearance-none;
+
+  background: linear-gradient(45deg, transparent 50%, #bbbbbb 50%),
+    linear-gradient(135deg, #bbbbbb 50%, transparent 50%),
+    linear-gradient(to right, transparent, transparent);
+  background-position: calc(100% - 21px) calc(1em + 5px),
+    calc(100% - 16px) calc(1em + 5px), 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+textarea {
+  @apply h-24 text-gray-500;
+
+  &::placeholder {
+    @apply text-gray-500;
+  }
+}
+
+select {
+  @apply h-12 bg-gray-100;
+
+  option {
+    @apply bg-white;
+  }
+
+  &:focus {
+    @apply shadow-none border-gray-300;
+    transform: none;
+  }
+}
+
+fieldset {
+  @apply flex flex-wrap capitalize mt-4 p-4 bg-gray-200 border-1 border-gray-300 w-full;
+  legend {
+    @apply text-20 font-bold p-4 bg-gray-100 border-gray-200 shadow;
+  }
+}
+
+/*--------------------------------------------------------------
+# Forms - CF7 - Edits
+--------------------------------------------------------------*/
+
+/* purgecss ignore */
+#wpcf7-f166-o1 .wpcf7-response-output {
+  @apply my-4 ml-0 text-white border-gray-300;
+}
+
+
+#wpcf7-f811-p25-o1 form {
+  @apply flex flex-wrap mx-auto p-4 border-1 w-10/12 bg-white;
+}
+
+.wpcf7-form {
+  @apply flex flex-col flex-wrap;
+}
+
+div.wpcf7 .ajax-loader {
+  @apply hidden;
+
+  &.is-active {
+    @apply inline-block;
+  }
+}
+
+.entry-content .wpcf7-list-item {
+  display: inline-flex;
+}
+
+.entry-content .wpcf7-list-item-label {
+  @apply ml-2;
+}
+
+[data-class=wpcf7cf_group] {
+  @apply w-full;
+}
+
+.wpcf7-list-item input[type=checkbox] {
+  @apply w-4;
+
+}
+
+.wpcf7-radio {
+@apply flex flex-col;
+}
+
+
+form.wpcf7-form {
+  p {
+    @apply mb-4 p-0;
+  }
+
+  input[type=submit] {
+    @extend .button;
+    @extend .button-primary;
+    @extend .button-md;
+    @apply capitalize;
+  }
+}
+
+.agree {
+  span.wpcf7-list-item {
+    @apply ml-0;
+  }
+}

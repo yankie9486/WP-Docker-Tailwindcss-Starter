@@ -1,0 +1,196 @@
+.site-header {
+  max-height: 150px;
+  & .top- {
+    @apply flex flex-col justify-start items-end relative bg-primary-600 z-50;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+
+    @screen xl {
+      @apply flex-row;
+      width: calc(100% * 0.7);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 3% 100%);
+      padding-left: calc((100vw * 0.5) - (100vw * 0.3) - 100px);
+    }
+
+    &__border {
+      @apply absolute bg-primary-500 z-30;
+    }
+
+    &__container {
+      @apply flex w-56 z-40 pl-1 pb-1;
+
+      .header-contact-mail {
+        &:hover {
+          svg {
+            @apply text-primary-800;
+          }
+        }
+      }
+    }
+  }
+
+  .custom-logo {
+    @apply -mt-5 relative z-50;
+    height: 75px;
+    width: auto;
+
+    @screen md {
+      @apply h-auto w-auto;
+    }
+  }
+}
+
+.screenreader-text {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+
+  &:focus {
+    color: #fff;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    position: static;
+    margin: auto;
+  }
+}
+
+#home-banner {
+  background-image: url("/wp-content/uploads/banner.jpg");
+  height: 500px;
+
+  @screen lg {
+    background-image: url("/wp-content/uploads/banner.jpg");
+  }
+  @screen xl {
+    background-image: url("/wp-content/uploads/banner.jpg");
+    height: 650px;
+  }
+}
+
+.banner {
+  background-size: cover;
+  background-position: left 80%;
+  background-repeat: no-repeat;
+}
+
+.checkmark-list {
+  @apply ml-4 mt-0;
+
+  li {
+    @apply flex items-start;
+
+    &:before {
+      @apply mr-4;
+    }
+
+    svg {
+      @apply mr-2;
+      width: 20px;
+    }
+  }
+
+  &.bottom-line {
+    li {
+      @apply border-b-1 border-gray-200 mt-1 pb-1 mb-1;
+    }
+  }
+}
+/* purgecss start ignore */
+.checkmark-icon li {
+  &:before {
+    content: url("../../assets/images/check-mark.svg");
+    @apply inline-flex w-9 h-9 mr-2;
+  }
+}
+/* purgecss end ignore */
+
+.check {
+  stroke-dasharray: 130px 130px;
+  stroke-dashoffset: 130px;
+  -webkit-transition: stroke-dashoffset 4.1s linear 0s;
+  transition: stroke-dashoffset 500ms ease-in-out;
+}
+.check.mark {
+  stroke-dashoffset: 0px;
+}
+
+.disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
+}
+
+.to-top {
+  @apply fixed p-2 rounded-4 transition-all duration-100 cursor-pointer z-50 text-primary-500 border-primary-600 border-2;
+  right: -3.5em;
+  bottom: 1.5em;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
+    @apply border-4;
+  }
+
+  &.show {
+    right: 1em;
+  }
+}
+
+.overlay {
+  @apply flex flex-wrap items-stretch justify-center;
+  &__wrapper {
+    @apply w-48 flex flex-col justify-center items-stretch relative overflow-hidden mr-4;
+
+    img {
+      @apply w-full h-auto;
+    }
+    .bg-overlay {
+      @apply bg-gray-900 opacity-0 absolute top-0 left-0 w-full h-full transition-opacity duration-150 rounded-4;
+    }
+    .title {
+      @apply absolute text-center left-0 -bottom-50 w-full opacity-0 transition-all duration-150 text-gray-100;
+      background-color: rbga(0, 0, 0, 0.5);
+    }
+
+    &:hover {
+      .title {
+        @apply opacity-1 bottom-25 text-20;
+
+        &.lg {
+          @apply bottom-10;
+        }
+      }
+
+      .bg-overlay {
+        @apply opacity-75;
+      }
+    }
+
+    &:last-child {
+      @apply pr-0;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+## Call to Action
+--------------------------------------------------------------*/
+
+#cta {
+  background-image: url("https://jcromptonelectric.com/wp-content/uploads/2020/10/cta--image-150x150.jpg");
+
+  @screen md {
+    background-image: url("https://jcromptonelectric.com/wp-content/uploads/2020/10/cta--image-768x160.jpg");
+  }
+  @screen lg {
+    background-image: url("https://jcromptonelectric.com/wp-content/uploads/2020/10/cta--image-1024x213.jpg");
+  }
+
+  @screen xl {
+    background-image: url("/wp-content/uploads/bg-cta-footer.jpg");
+  }
+}
